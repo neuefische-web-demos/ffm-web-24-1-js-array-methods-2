@@ -94,12 +94,10 @@ simpsons.forEach((simpson) => {
   characterList.append(card);
 });
 
-// includes()
-
+// ✨ includes()
 const numberToCheck = 333;
 
 const numberIsIncluded = numbers.includes(numberToCheck, 1);
-
 console.log('is included', numberIsIncluded);
 
 numberOutput.textContent = numberIsIncluded
@@ -114,11 +112,13 @@ stringOutput.textContent = stringIsIncluded
   ? `Yes, ${stringToCheck} is included`
   : `No, ${stringToCheck} is not included`;
 
-// The OR issue - that's not correct 👎
+// The OR issue - that's correct 👍
 const isCSSorHTMLIncluded = strings.includes('HTML') || strings.includes('CSS');
 
-// find()
+// The OR issue - that's not correct 👎
+const isCSSorHTMLIncludedNOT = strings.includes('HTML' || 'CSS');
 
+// ✨ find()
 const objectToFind = simpsons.find((simpson) => simpson.age < 40 && simpson.name.startsWith('B'));
 
 console.log('is type of: ', typeof objectToFind);
